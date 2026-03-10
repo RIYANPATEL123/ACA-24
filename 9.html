@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthIn Live - Health Auditor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="9.css" class="rel">
+</head>
+<body>
+
+<div class="container">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h1 style="margin: 0; color: var(--truth-red);">TruthIn <span style="font-size: 14px; color: #888; font-weight: normal;">LIVE</span></h1>
+        <p style="margin: 5px 0; font-size: 14px; color: #666;">Powered by Open Food Facts API</p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="pInput" placeholder="Search any product globally..." autocomplete="off">
+        <div id="suggestions"></div>
+    </div>
+
+    <div id="card" class="card">
+        <img id="p-img" src="" class="p-image">
+        <h2 id="p-name" style="margin: 0 0 5px 0;"></h2>
+        <span id="p-cat" style="color: #888; font-size: 13px;"></span>
+
+        <div class="score-display">
+            <div id="score-circle" class="score-circle">0.0</div>
+            <div id="v-tag" class="verdict-tag"></div>
+        </div>
+
+        <div class="breakdown">
+            <div class="b-item"><small>ENERGY</small><b id="eng"></b></div>
+            <div class="b-item"><small>TOTAL SUGAR</small><b id="ts"></b></div>
+            <div class="b-item"><small>ADDED SUGAR</small><b id="as" style="color: var(--truth-red);"></b></div>
+            <div class="b-item"><small>SAT. FAT</small><b id="fat"></b></div>
+            <div class="b-item"><small>SODIUM</small><b id="sod"></b></div>
+            <div class="b-item"><small>ADDITIVES</small><b id="add"></b></div>
+        </div>
+
+        <div class="warnings">
+            <span class="w-title">WHY THIS RATING?</span>
+            <div id="w-list" class="w-text"></div>
+        </div>
+    </div>
+</div>
+
+<script src="9.js"></script>
+
+</body>
+</html>
